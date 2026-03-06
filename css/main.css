@@ -1658,20 +1658,32 @@ h1 {
 
 /* Agregar más estilos según sea necesario */
 
-/* Media query para celulares */
-@media (max-width: 768px) {
-    /* Ajustamos el tamaño del texto */
-    .titulo {
-        font-size: 1.2rem; /* Haz el texto más pequeño */
-        text-align: center;
-        width: 90%;
-        margin: 0 auto;
-        padding-top: 20px;
+/* Ajuste especial para que todo quepa en el celular */
+@media (max-width: 600px) {
+    .container {
+        overflow: hidden; /* Evita que se pueda scrollear hacia los lados */
+        height: 100vh;
     }
 
-    /* Magia para encoger las flores sin romper el código */
+    /* Reducimos el tamaño del título */
+    .titulo {
+        font-size: 1.2rem !important;
+        padding: 10px;
+        top: 5% !important; /* Lo subimos un poco más */
+        width: 90%;
+        left: 5%;
+    }
+
+    /* Encogemos el jardín de flores para que suba y se vea completo */
     .flowers {
-        transform: scale(0.6); /* Ajusta este valor (0.5, 0.7) según veas necesario */
-        transform-origin: bottom center; /* Asegura que se encojan desde la base */
+        transform: scale(0.55); /* Ajusta este número (0.5 o 0.6) si quieres más grande o pequeño */
+        transform-origin: bottom center;
+        bottom: 15% !important; /* Sube las flores para que no las tape el borde inferior */
+    }
+    
+    /* Ajuste para las letras de las canciones si las usas */
+    #lyrics {
+        font-size: 1rem;
+        bottom: 5%;
     }
 }
